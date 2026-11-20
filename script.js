@@ -4,6 +4,11 @@ const bpmInput = document.getElementById('bpm-input');
 const startButton = document.getElementById('start-btn');
 const pulse = document.getElementById('circle_pulse');
 const circleColor = document.querySelector('.bpm_display');
+const iconButton = document.getElementById('icon-running');
+const textButton = document.getElementById('text-btn');
+const soundButton = document.querySelector('.btn-sound');
+const iconBtnSound = document.getElementById('icon-btn-sound');
+const textSoundButton = document.getElementById('text-sound-btn');
 
 const taps = [];
 let resetTimer;
@@ -12,7 +17,7 @@ let isRunning = false;
 function handleTap() {
 
     if (isRunning) {
-        stopMetronom();
+        stopMetronome();
         taps.length = 0; 
     }
 
@@ -61,9 +66,6 @@ document.addEventListener('keydown', (event) => {
     }
 })
 
-const soundButton = document.querySelector('.btn-sound');
-const iconBtnSound = document.getElementById('icon-btn-sound');
-const textSoundButton = document.getElementById('text-sound-btn');
 
 let soundEnabled = true;
 
@@ -123,7 +125,7 @@ function startMetronome(bpm) {
     }, interval);
 }
 
-function stopMetronom() {
+function stopMetronome() {
     clearInterval(metronomeTimer);
     textButton.textContent = 'Старт';
     iconButton.src = "img/старт.svg";
@@ -132,18 +134,14 @@ function stopMetronom() {
 }
 
 
-const iconButton = document.getElementById('icon-running');
-const textButton = document.getElementById('text-btn');
-
-
 startButton.addEventListener("click", () => {
 
     if (isRunning) {
-        stopMetronom();
+        stopMetronome();
     } else {
         const bpm = Number(bpmInput.value);
 
-        if (bpm < 40 || bpm > 240 || !Number.isFinite(bpm)) {
+        if (bpm < 40 || bpm > 240 || !Number.isInteger(bpm)) {
             alert("Введите BPM от 40 до 240");
             return;
         }
