@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Gabriela&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Langar&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Gabriela&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Langar&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <title>BPM</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="head">
+            <div class="logo"><img src="img/лого.svg"></div>
+            <h1 class="header_text">Pulse</h1>
+        </div>
+    </header>
+
+    <main>
+        <button class="btn-sound"><img id="icon-btn-sound" src="img/звук.svg"> Звук: <span id="text-sound-btn">вкл</span></button>
+        <div class="circle-outside">
+            <div class="bpm_display">
+                <div class="bpm_pulse" id="circle_pulse">
+                    <div class="bpm_value">
+                        <h2 id="bpm_number">00</h2>
+                        <p>BPM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="container_start_metronome">
+
+                <div class="container-bpm-btn">
+                    <button class="bpm-btn" id="start-btn"> <img id="icon-running" src="img/старт.svg">
+                        <span id="text-btn">Старт</span></button>
+                </div>
+
+                <div class="input_group">
+                    <input type="number" id="bpm-input" placeholder="120">
+                    <label for="bpm-input">Ввести BPM </label>
+                </div>
+
+            </div>
+
+            <div class="container_btn_tap">
+                <button class="btn_tap" id="tap_bpm">
+                    <div class="text_content_btn">TAP</div>
+                    <div class="line"></div>
+                    <div class="content_subtitle_btn">нажмите, чтобы
+                        узнать темп
+                    </div>
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
